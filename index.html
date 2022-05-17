@@ -4,56 +4,32 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8"> -->
 <!-- Tagueamento de iFrames -->
     
-    
-    <script>
-      var equalayer = [{
-        event: "pageview",
-        content: {
-          path: "https://ngrok.com",
-          title: "Ngrok utilização",
-          type: "iframe",
-          section1: "teste1",
-          section2: "teste2",
-          section3: "teste3"
-        }
-      }];
-       
-  function enviarEventoMenuParaPrincipal()
-   {
-     parent.postMessage(
-     {
-       event: "taguear.iframe",
-       mapaEventos: {
-         "eventCategory": "engajamento",
-         "eventAction": "clicou-iframe",
-         "eventLabel": "[opcao-selecionada]"
-       }
-     },
-       "https://noticias.r7.com/saude/coronavirus/mapa-da-vacinacao"
-     );
-   }
-    </script>
-
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'equalayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'equalayer', 'GTM-MQ8JLQ6');
-    </script>
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ8JLQ6" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <div class="container">
       <button style="background-color: red;color: white;border: 1px solid #e4e4e4;padding: 8px;border-radius: 3px;cursor: pointer;">Não pressione</button>
     </div>
   </body>
 
+
+  <script type="text/javascript">
+ 
+    function enviarEventoMenuParaPrincipal()
+     {
+       parent.postMessage(
+       {
+         event: "engagement.mapa-vacinacao",
+         mapaVacinacao: {
+           "eventCategory": "engajamento",
+           "eventAction": "clicou-menu",
+           "eventLabel": "[opcao-selecionada]"
+         }
+       },
+         "https://d4f6-2804-1c50-1fd-ea00-4df0-ab0c-e29d-3923.ngrok.io/"
+       );
+     }
+   
+   </script>
   </html>

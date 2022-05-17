@@ -1,35 +1,36 @@
 <html>
-  <head>
-    <!-- <link rel="stylesheet" type="text/css" href="main/css.css">
+
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="main/css.css">
     <meta http-equiv="content-type" content="text/html;charset=utf-8"> -->
-<!-- Tagueamento de iFrames -->
-    
-  </head>
+  <!-- Tagueamento de iFrames -->
 
-  <body>
+</head>
 
-    <div class="container">
-      <button style="background-color: red;color: white;border: 1px solid #e4e4e4;padding: 8px;border-radius: 3px;cursor: pointer;">Não pressione</button>
-    </div>
-  </body>
+<body>
+
+  <div class="container">
+    <button
+      style="background-color: red;color: white;border: 1px solid #e4e4e4;padding: 8px;border-radius: 3px;cursor: pointer;">Não
+      pressione</button>
+  </div>
+</body>
 
 
-  <script type="text/javascript">
- 
-    function enviarEventoMenuParaPrincipal()
-     {
-       parent.postMessage(
-       {
-         event: "engagement.mapa-vacinacao",
-         mapaVacinacao: {
-           "eventCategory": "engajamento",
-           "eventAction": "clicou-menu",
-           "eventLabel": "[opcao-selecionada]"
-         }
-       },
-         "https://d4f6-2804-1c50-1fd-ea00-4df0-ab0c-e29d-3923.ngrok.io/"
-       );
-     }
-   
-   </script>
-  </html>
+<script type="text/javascript">
+
+  function enviarEventoiFrame() {
+    parent.postMessage(
+      {
+        "event": "naoclique-botao",
+        "eventCategory": "engajamento",
+        "eventAction": "clicou-botao",
+        "eventLabel": "[opcao-selecionada]"
+      },
+      "https://95ea-2804-1c50-1fd-ea00-4df0-ab0c-e29d-3923.ngrok.io"
+    );
+  }
+
+</script>
+
+</html>
